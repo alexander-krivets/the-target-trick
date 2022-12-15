@@ -21,11 +21,12 @@ h4
 {
   color: darkslategrey;
   padding: 15px;
+  text-transform: uppercase;
 }
 
 h1
 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
 }
 
 h2
@@ -35,15 +36,18 @@ h2
 
 h3
 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 h4
 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
-h1>a
+h1>a,
+h2>a,
+h3>a,
+h4>a
 {
   font-size: inherit;
   color: inherit;
@@ -63,7 +67,7 @@ pre
 
 section
 {
-  padding: 30px 15px;
+  padding: 15px;
 }
 
 #show-section
@@ -114,34 +118,23 @@ section
 
 .show-link:hover
 {
-  /* color: snow; */
   color: darkslategrey;
   text-shadow: 0 0 1px darkslategrey;
 }
 
-
 /* Accordion Example */
-.accordion-section
-{
-  background-color: aliceblue;
-}
 
-[id^="accordion-item-"]:target>.accordion__body
+.accordion-section
 {
   display: block;
 }
 
-[id^="accordion-item-"]:not(:target)>.accordion__body
-{
-  display: none;
-}
 
 .accordion__item
 {
   border: 2px solid darkslategray;
   border-radius: 7px 7px 0 0;
   margin-top: -7px;
-  padding: 0;
 }
 
 .accordion__item:not(:last-child)
@@ -151,21 +144,15 @@ section
 
 .accordion__header
 {
-  border-radius: inherit;
-  margin: 0;
   padding: 0;
 }
 
 .accordion__link
 {
   background-color: darkseagreen;
-  border-radius: inherit;
   color: darkslategrey;
   display: block;
-  font-size: 1.25rem;
   padding: 15px 15px 20px;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 .accordion__link::after
@@ -205,13 +192,23 @@ section
 
 .accordion__body
 {
-  padding: 15px 15px 30px;
+  padding: 15px;
+}
+
+[id^="accordion-item-"]:target>.accordion__body
+{
+  display: block;
+}
+
+[id^="accordion-item-"]:not(:target)>.accordion__body
+{
+  display: none;
 }
 
 /* Tabs Example */
 .tabs-section
 {
-  background-color: beige;
+  display: block;
 }
 
 .tab
@@ -223,34 +220,25 @@ section
 .tab__item
 {
   display: inline-block;
-  margin: 0;
-  padding: 0;
 }
 
 .tab__header
 {
-  background-color: darkseagreen;
   border: 2px solid darkslategray;
   border-bottom: none;
   border-radius: 7px 7px 0 0;
-  position: relative;
-  margin: 0;
   padding: 0;
+  position: relative;
+
 }
 
 .tab__link
 {
-  /* background-color: darkseagreen;
-  border: 2px solid darkslategray;
-  border-bottom: none; */
+  background-color: darkseagreen;
   border-radius: inherit;
   color: darkslategrey;
   display: block;
-  font-size: 1.25rem;
-  margin: 0;
   padding: 15px 15px 20px;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 .tab__link:hover
@@ -274,9 +262,7 @@ section
 
 .tab__body
 {
-  /* display: flex;
-  flex-direction: column; */
-  height: 240px;
+  /* height: 220px; */
   overflow-y: hidden;
   overflow-y: overlay;
   margin-bottom: 15px;
