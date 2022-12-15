@@ -1,0 +1,298 @@
+*
+{
+  font-size: 18px;
+  color: grey;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper
+{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: auto;
+  width: auto;
+}
+
+h1,
+h2,
+h3,
+h4
+{
+  color: darkslategrey;
+  padding: 15px;
+}
+
+h1
+{
+  font-size: 2.25rem;
+}
+
+h2
+{
+  font-size: 2.0rem;
+}
+
+h3
+{
+  font-size: 1.75rem;
+}
+
+h4
+{
+  font-size: 1.5rem;
+}
+
+h1>a
+{
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+p
+{
+  padding: 15px;
+}
+
+pre
+{
+  border-left: 2px solid darkslategrey;
+  color: darkslategrey;
+}
+
+section
+{
+  padding: 30px 15px;
+}
+
+#show-section
+{
+  display: block;
+  background-color: lightgoldenrodyellow;
+  padding: 15px 30px;
+}
+
+#show-section:target
+{
+  display: block;
+}
+
+
+#show-section:not(:target)
+{
+  display: none;
+}
+
+.show-btn
+{
+  display: inline-block;
+  padding: 7px 15px;
+  border: 2px solid darkslategray;
+  border-radius: 7px;
+  background-color: darkseagreen;
+  color: #444343;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.show-btn:hover
+{
+  color: snow;
+  border-color: darkseagreen;
+  background-color: darkslategray;
+}
+
+.show-link
+{
+  color: darkslategrey;
+  font-size: 1.25rem;
+  margin: 30px auto;
+  padding-bottom: 30px;
+  text-decoration: none;
+}
+
+.show-link:hover
+{
+  /* color: snow; */
+  color: darkslategrey;
+  text-shadow: 0 0 1px darkslategrey;
+}
+
+
+/* Accordion Example */
+.accordion-section
+{
+  background-color: aliceblue;
+}
+
+[id^="accordion-item-"]:target>.accordion__body
+{
+  display: block;
+}
+
+[id^="accordion-item-"]:not(:target)>.accordion__body
+{
+  display: none;
+}
+
+.accordion__item
+{
+  border: 2px solid darkslategray;
+  border-radius: 7px 7px 0 0;
+  margin-top: -7px;
+  padding: 0;
+}
+
+.accordion__item:not(:last-child)
+{
+  border-bottom: none;
+}
+
+.accordion__header
+{
+  border-radius: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion__link
+{
+  background-color: darkseagreen;
+  border-radius: inherit;
+  color: darkslategrey;
+  display: block;
+  font-size: 1.25rem;
+  padding: 15px 15px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.accordion__link::after
+{
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 2px solid darkslategrey;
+  border-bottom: none;
+  border-right: none;
+  rotate: 45deg;
+  float: right;
+  margin: 10px;
+}
+
+.accordion__link:hover
+{
+  padding: 13px 13px 18px;
+  border: 2px solid snow;
+  border-radius: 7px 7px 0 0;
+}
+
+.accordion__link:hover,
+.accordion__link:hover::after
+{
+  background-color: darkslategray;
+  border-color: snow;
+  color: snow;
+}
+
+.accordion__link:hover::after,
+[id^="accordion-item-"]:target .accordion__link::after
+{
+  rotate: 225deg;
+}
+
+.accordion__body
+{
+  padding: 15px 15px 30px;
+}
+
+/* Tabs Example */
+.tabs-section
+{
+  background-color: beige;
+}
+
+.tab
+{
+  position: relative;
+  height: 360px;
+}
+
+.tab__item
+{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.tab__header
+{
+  background-color: darkseagreen;
+  border: 2px solid darkslategray;
+  border-bottom: none;
+  border-radius: 7px 7px 0 0;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.tab__link
+{
+  /* background-color: darkseagreen;
+  border: 2px solid darkslategray;
+  border-bottom: none; */
+  border-radius: inherit;
+  color: darkslategrey;
+  display: block;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 15px 15px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.tab__link:hover
+{
+  background-color: darkslategray;
+  border: 2px solid snow;
+  border-bottom: none;
+  color: snow;
+  padding: 13px 13px 20px;
+}
+
+.tab__body
+{
+  background-color: snow;
+  border: 2px solid darkslategray;
+  border-radius: 7px;
+  left: 0;
+  padding: 15px 15px 20px;
+  position: absolute;
+}
+
+.tab__body
+{
+  /* display: flex;
+  flex-direction: column; */
+  height: 240px;
+  overflow-y: hidden;
+  overflow-y: overlay;
+  margin-bottom: 15px;
+}
+
+#tab-item-1>.tab__body
+{
+  display: block;
+}
+
+[id^="tab-item-"]:target>.tab__body
+{
+  display: block;
+}
+
+[id^="tab-item-"]:not(:target)>.tab__body
+{
+  display: none;
+}
