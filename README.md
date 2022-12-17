@@ -18,12 +18,9 @@ The following element would be selected by a :target selector when the current U
 
      <section id="section2">Example</section>
 
-## Syntax
+### Syntax
 
     :target
 
-# Header #1
-## Header #2
-### Header #3
-#### Header #4
-content
+
+
